@@ -8,12 +8,14 @@ from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 class MenuItemView(ListCreateAPIView):
     serializer_class = MenuSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return Menu.objects.all()
     
 class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
     serializer_class = MenuSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return Menu.objects.all()
