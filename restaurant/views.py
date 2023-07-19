@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from restaurant.serializers import MenuSerializer, BookingSerializer
 from rest_framework.generics import ListCreateAPIView, DestroyAPIView, RetrieveUpdateAPIView
+from restaurant.models import Menu, Booking
 
 # Create your views here.
 #MenuItemView – inheriting the rest_framework.generics.ListCreateView class. It handles the POST and GET method calls.
