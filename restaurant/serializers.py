@@ -7,6 +7,9 @@ class MenuSerializer(serializers.Serializer):
     class Meta:
         model = Menu
         fields = "__all__"
+    
+    def create(self, validated_data):
+        return Menu.objects.create(**validated_data)
 
 
 #Create booking serializer

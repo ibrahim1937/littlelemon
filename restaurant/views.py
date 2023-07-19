@@ -10,6 +10,7 @@ class MenuItemView(ListCreateAPIView):
 
     def get_queryset(self):
         return Menu.objects.all()
+    
 
 
 #SingleMenuItemView – inherits the RetrieveUpdateAPIView and DestroyAPIView classes both imported from the rest_framework.generics module. This class is responsible for processing GET, PUT and DELETE method calls.
